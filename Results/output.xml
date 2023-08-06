@@ -1,99 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230806 17:06:34.687" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230806 21:46:27.747" rpa="false" schemaversion="3">
 <suite id="s1" name="dummiAPI" source="C:\development\robot-scripts\rfrequestslibrary\Tests\dummiAPI.robot">
 <test id="s1-t1" name="Get List Of Users" line="16">
 <kw name="Create Dictionary" library="BuiltIn">
 <var>${headers}</var>
 <arg>app-id=${app-id}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20230806 17:06:34.747" level="INFO">${headers} = {'app-id': '64cc05b3e19eb856065f5806'}</msg>
-<status status="PASS" starttime="20230806 17:06:34.747" endtime="20230806 17:06:34.747"/>
+<msg timestamp="20230806 21:46:27.802" level="INFO">${headers} = {'app-id': '64cc05b3e19eb856065f5806'}</msg>
+<status status="PASS" starttime="20230806 21:46:27.802" endtime="20230806 21:46:27.802"/>
 </kw>
 <kw name="GET" library="RequestsLibrary">
 <var>${response}</var>
 <arg>url=${BaseURL}/user</arg>
 <arg>headers=${headers}</arg>
 <doc>Sends a GET request.</doc>
-<msg timestamp="20230806 17:06:35.101" level="INFO">GET Request : url=https://dummyapi.io/data/v1//user (redirected) 
+<msg timestamp="20230806 21:46:28.191" level="INFO">GET Request : url=https://dummyapi.io/data/v1//user (redirected) 
  path_url=/data/v1//user 
  headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'app-id': '64cc05b3e19eb856065f5806'} 
  body=None 
  </msg>
-<msg timestamp="20230806 17:06:35.101" level="INFO">GET Response : url=https://dummyapi.io/data/v1/user 
+<msg timestamp="20230806 21:46:28.191" level="INFO">GET Response : url=https://dummyapi.io/data/v1/user 
  status=200, reason=OK 
- headers={'Connection': 'keep-alive', 'Content-Length': '3081', 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'private', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"c09-IyHXqmGfHKxjXELgipmaVqxDqSM"', 'Function-Execution-Id': '4qkyw51hrbyx', 'Server': 'Google Frontend', 'Strict-Transport-Security': 'max-age=31556926', 'X-Cloud-Trace-Context': '943b71a6fe872b225b4c1c80535b7d73;o=1', 'X-Country-Code': 'DE', 'Accept-Ranges': 'bytes', 'Date': 'Sun, 06 Aug 2023 15:06:35 GMT', 'X-Served-By': 'cache-fra-etou8220086-FRA', 'X-Cache': 'MISS', 'X-Cache-Hits': '0', 'X-Timer': 'S1691334395.025411,VS0,VE235', 'Vary': 'cookie,need-authorization, x-fh-requested-host, accept-encoding', 'alt-svc': 'h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400'} 
+ headers={'Connection': 'keep-alive', 'Content-Length': '3081', 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'private', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"c09-IyHXqmGfHKxjXELgipmaVqxDqSM"', 'Function-Execution-Id': '4qkydva0lk3j', 'Server': 'Google Frontend', 'Strict-Transport-Security': 'max-age=31556926', 'X-Cloud-Trace-Context': 'eb5ba520e3e1d845e7d4857319974fc9;o=1', 'X-Country-Code': 'DE', 'Accept-Ranges': 'bytes', 'Date': 'Sun, 06 Aug 2023 19:46:28 GMT', 'X-Served-By': 'cache-fra-etou8220078-FRA', 'X-Cache': 'MISS', 'X-Cache-Hits': '0', 'X-Timer': 'S1691351188.006513,VS0,VE189', 'Vary': 'cookie,need-authorization, x-fh-requested-host, accept-encoding', 'alt-svc': 'h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400'} 
  body={"data":[{"id":"60d0fe4f5311236168a109ca","title":"ms","firstName":"Sara","lastName":"Andersen","picture":"https://randomuser.me/api/portraits/women/58.jpg"},{"id":"60d0fe4f5311236168a109cb","title":"miss","firstName":"Edita","lastName":"Vestering","picture":"https://randomuser.me/api/portraits/med/women/89.jpg"},{"id":"60d0fe4f5311236168a109cc","title":"ms","firstName":"Adina","lastName":"Barbosa","picture":"https://randomuser.me/api/portraits/med/women/28.jpg"},{"id":"60d0fe4f5311236168a109cd","title":"mr","firstName":"Roberto","lastName":"Vega","picture":"https://randomuser.me/api/portraits/med/men/25.jpg"},{"id":"60d0fe4f5311236168a109ce","title":"mr","firstName":"Rudi","lastName":"Droste","picture":"https://randomuser.me/api/portraits/med/men/83.jpg"},{"id":"60d0fe4f5311236168a109cf","title":"mrs","firstName":"Carolina","lastName":"Lima","picture":"https://randomuser.me/api/portraits/med/women/5.jpg"},{"id":"60d0fe4f5311236168a109d0","title":"mr","firstName":"Emre","lastName":"Asikoglu","picture":"https://randomuser.me/api/portraits/med/men/23.jpg"},{"id":"60d0fe4f5311236168a109d1","title":"mr","firstName":"Kent","lastName":"Brewer","picture":"https://randomuser.me/api/portraits/med/men/52.jpg"},{"id":"60d0fe4f5311236168a109d2","title":"mr","firstName":"Evan","lastName":"Carlson","picture":"https://randomuser.me/api/portraits/med/men/80.jpg"},{"id":"60d0fe4f5311236168a109d3","title":"mr","firstName":"Friedrich-Karl","lastName":"Brand","picture":"https://randomuser.me/api/portraits/med/men/7.jpg"},{"id":"60d0fe4f5311236168a109d4","title":"mr","firstName":"Valentin","lastName":"Ortega","picture":"https://randomuser.me/api/portraits/med/men/3.jpg"},{"id":"60d0fe4f5311236168a109d5","title":"mrs","firstName":"Sibylle","lastName":"Leibold","picture":"https://randomuser.me/api/portraits/med/women/89.jpg"},{"id":"60d0fe4f5311236168a109d6","title":"mrs","firstName":"Elisa","lastName":"Lorenzo","picture":"https://randomuser.me/api/portraits/med/women/89.jpg"},{"id":"60d0fe4f5311236168a109d7","title":"mr","firstName":"Leevi","lastName":"Savela","picture":"https://randomuser.me/api/portraits/med/men/67.jpg"},{"id":"60d0fe4f5311236168a109d8","title":"mrs","firstName":"Karoline","lastName":"Sviggum","picture":"https://randomuser.me/api/portraits/med/women/61.jpg"},{"id":"60d0fe4f5311236168a109d9","title":"ms","firstName":"Nuria","lastName":"Leon","picture":"https://randomuser.me/api/portraits/med/women/93.jpg"},{"id":"60d0fe4f5311236168a109da","title":"mr","firstName":"Lance","lastName":"Foster","picture":"https://randomuser.me/api/portraits/med/men/13.jpg"},{"id":"60d0fe4f5311236168a109db","title":"miss","firstName":"Naomi","lastName":"Rodrigues","picture":"https://randomuser.me/api/portraits/med/women/39.jpg"},{"id":"60d0fe4f5311236168a109dc","title":"mr","firstName":"Evan","lastName":"Roux","picture":"https://randomuser.me/api/portraits/med/men/59.jpg"},{"id":"60d0fe4f5311236168a109dd","title":"mr","firstName":"Miguel","lastName":"Lima","picture":"https://randomuser.me/api/portraits/med/men/31.jpg"}],"total":99,"page":0,"limit":20} 
  </msg>
-<msg timestamp="20230806 17:06:35.101" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20230806 17:06:34.748" endtime="20230806 17:06:35.102"/>
+<msg timestamp="20230806 21:46:28.191" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230806 21:46:27.802" endtime="20230806 21:46:28.191"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${response.status_code}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230806 17:06:35.103" endtime="20230806 17:06:35.105"/>
+<status status="PASS" starttime="20230806 21:46:28.193" endtime="20230806 21:46:28.194"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>200</arg>
 <arg>${response.status_code}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20230806 17:06:35.107" level="INFO">Argument types are:
+<msg timestamp="20230806 21:46:28.196" level="INFO">Argument types are:
 &lt;class 'str'&gt;
 &lt;class 'int'&gt;</msg>
-<status status="PASS" starttime="20230806 17:06:35.106" endtime="20230806 17:06:35.107"/>
+<status status="PASS" starttime="20230806 21:46:28.195" endtime="20230806 21:46:28.196"/>
 </kw>
-<status status="PASS" starttime="20230806 17:06:34.746" endtime="20230806 17:06:35.108"/>
+<status status="PASS" starttime="20230806 21:46:27.801" endtime="20230806 21:46:28.197"/>
 </test>
 <test id="s1-t2" name="Get User By ID" line="22">
 <kw name="Create Dictionary" library="BuiltIn">
 <var>${headers}</var>
 <arg>app-id=${app-id}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20230806 17:06:35.111" level="INFO">${headers} = {'app-id': '64cc05b3e19eb856065f5806'}</msg>
-<status status="PASS" starttime="20230806 17:06:35.110" endtime="20230806 17:06:35.111"/>
-</kw>
-<kw name="Create Dictionary" library="BuiltIn">
-<var>${ID}</var>
-<arg>path=${userID}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20230806 17:06:35.112" level="INFO">${ID} = {'path': '60d0fe4f5311236168a109ca'}</msg>
-<status status="PASS" starttime="20230806 17:06:35.111" endtime="20230806 17:06:35.112"/>
+<msg timestamp="20230806 21:46:28.200" level="INFO">${headers} = {'app-id': '64cc05b3e19eb856065f5806'}</msg>
+<status status="PASS" starttime="20230806 21:46:28.200" endtime="20230806 21:46:28.200"/>
 </kw>
 <kw name="GET" library="RequestsLibrary">
 <var>${response}</var>
-<arg>url=${BaseURL}/user</arg>
+<arg>url=${BaseURL}/user/${userID}</arg>
 <arg>headers=${headers}</arg>
-<arg>params=${userID}</arg>
 <doc>Sends a GET request.</doc>
-<msg timestamp="20230806 17:06:35.457" level="INFO">GET Request : url=https://dummyapi.io/data/v1//user?60d0fe4f5311236168a109ca (redirected) 
- path_url=/data/v1//user?60d0fe4f5311236168a109ca 
+<msg timestamp="20230806 21:46:28.582" level="INFO">GET Request : url=https://dummyapi.io/data/v1//user/60d0fe4f5311236168a109ca (redirected) 
+ path_url=/data/v1//user/60d0fe4f5311236168a109ca 
  headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'app-id': '64cc05b3e19eb856065f5806'} 
  body=None 
  </msg>
-<msg timestamp="20230806 17:06:35.457" level="INFO">GET Response : url=https://dummyapi.io/data/v1/user?60d0fe4f5311236168a109ca 
+<msg timestamp="20230806 21:46:28.582" level="INFO">GET Response : url=https://dummyapi.io/data/v1/user/60d0fe4f5311236168a109ca 
  status=200, reason=OK 
- headers={'Connection': 'keep-alive', 'Content-Length': '3081', 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'private', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"c09-IyHXqmGfHKxjXELgipmaVqxDqSM"', 'Function-Execution-Id': '4qkyzzkfvfdr', 'Server': 'Google Frontend', 'Strict-Transport-Security': 'max-age=31556926', 'X-Cloud-Trace-Context': '7dd39bfef1f8d7a5d890a32e15485cb1', 'X-Country-Code': 'DE', 'Accept-Ranges': 'bytes', 'Date': 'Sun, 06 Aug 2023 15:06:35 GMT', 'X-Served-By': 'cache-fra-etou8220038-FRA', 'X-Cache': 'MISS', 'X-Cache-Hits': '0', 'X-Timer': 'S1691334395.379599,VS0,VE235', 'Vary': 'cookie,need-authorization, x-fh-requested-host, accept-encoding', 'alt-svc': 'h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400'} 
- body={"data":[{"id":"60d0fe4f5311236168a109ca","title":"ms","firstName":"Sara","lastName":"Andersen","picture":"https://randomuser.me/api/portraits/women/58.jpg"},{"id":"60d0fe4f5311236168a109cb","title":"miss","firstName":"Edita","lastName":"Vestering","picture":"https://randomuser.me/api/portraits/med/women/89.jpg"},{"id":"60d0fe4f5311236168a109cc","title":"ms","firstName":"Adina","lastName":"Barbosa","picture":"https://randomuser.me/api/portraits/med/women/28.jpg"},{"id":"60d0fe4f5311236168a109cd","title":"mr","firstName":"Roberto","lastName":"Vega","picture":"https://randomuser.me/api/portraits/med/men/25.jpg"},{"id":"60d0fe4f5311236168a109ce","title":"mr","firstName":"Rudi","lastName":"Droste","picture":"https://randomuser.me/api/portraits/med/men/83.jpg"},{"id":"60d0fe4f5311236168a109cf","title":"mrs","firstName":"Carolina","lastName":"Lima","picture":"https://randomuser.me/api/portraits/med/women/5.jpg"},{"id":"60d0fe4f5311236168a109d0","title":"mr","firstName":"Emre","lastName":"Asikoglu","picture":"https://randomuser.me/api/portraits/med/men/23.jpg"},{"id":"60d0fe4f5311236168a109d1","title":"mr","firstName":"Kent","lastName":"Brewer","picture":"https://randomuser.me/api/portraits/med/men/52.jpg"},{"id":"60d0fe4f5311236168a109d2","title":"mr","firstName":"Evan","lastName":"Carlson","picture":"https://randomuser.me/api/portraits/med/men/80.jpg"},{"id":"60d0fe4f5311236168a109d3","title":"mr","firstName":"Friedrich-Karl","lastName":"Brand","picture":"https://randomuser.me/api/portraits/med/men/7.jpg"},{"id":"60d0fe4f5311236168a109d4","title":"mr","firstName":"Valentin","lastName":"Ortega","picture":"https://randomuser.me/api/portraits/med/men/3.jpg"},{"id":"60d0fe4f5311236168a109d5","title":"mrs","firstName":"Sibylle","lastName":"Leibold","picture":"https://randomuser.me/api/portraits/med/women/89.jpg"},{"id":"60d0fe4f5311236168a109d6","title":"mrs","firstName":"Elisa","lastName":"Lorenzo","picture":"https://randomuser.me/api/portraits/med/women/89.jpg"},{"id":"60d0fe4f5311236168a109d7","title":"mr","firstName":"Leevi","lastName":"Savela","picture":"https://randomuser.me/api/portraits/med/men/67.jpg"},{"id":"60d0fe4f5311236168a109d8","title":"mrs","firstName":"Karoline","lastName":"Sviggum","picture":"https://randomuser.me/api/portraits/med/women/61.jpg"},{"id":"60d0fe4f5311236168a109d9","title":"ms","firstName":"Nuria","lastName":"Leon","picture":"https://randomuser.me/api/portraits/med/women/93.jpg"},{"id":"60d0fe4f5311236168a109da","title":"mr","firstName":"Lance","lastName":"Foster","picture":"https://randomuser.me/api/portraits/med/men/13.jpg"},{"id":"60d0fe4f5311236168a109db","title":"miss","firstName":"Naomi","lastName":"Rodrigues","picture":"https://randomuser.me/api/portraits/med/women/39.jpg"},{"id":"60d0fe4f5311236168a109dc","title":"mr","firstName":"Evan","lastName":"Roux","picture":"https://randomuser.me/api/portraits/med/men/59.jpg"},{"id":"60d0fe4f5311236168a109dd","title":"mr","firstName":"Miguel","lastName":"Lima","picture":"https://randomuser.me/api/portraits/med/men/31.jpg"}],"total":99,"page":0,"limit":20} 
+ headers={'Connection': 'keep-alive', 'Content-Length': '475', 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'private', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"1db-L9I5hz+AAaUhZ7tQZAtN5tmVtbQ"', 'Function-Execution-Id': '4qkytiv1x4iq', 'Server': 'Google Frontend', 'Strict-Transport-Security': 'max-age=31556926', 'X-Cloud-Trace-Context': 'f93e0187ba731d4540d399f5705aedd3', 'X-Country-Code': 'DE', 'Accept-Ranges': 'bytes', 'Date': 'Sun, 06 Aug 2023 19:46:28 GMT', 'X-Served-By': 'cache-fra-etou8220060-FRA', 'X-Cache': 'MISS', 'X-Cache-Hits': '0', 'X-Timer': 'S1691351188.337684,VS0,VE241', 'Vary': 'cookie,need-authorization, x-fh-requested-host, accept-encoding', 'alt-svc': 'h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400'} 
+ body={"id":"60d0fe4f5311236168a109ca","title":"ms","firstName":"Sara","lastName":"Andersen","picture":"https://randomuser.me/api/portraits/women/58.jpg","gender":"female","email":"sara.andersen@example.com","dateOfBirth":"1996-04-30T19:26:49.610Z","phone":"92694011","location":{"street":"9614, SÃ¸ndermarksvej","city":"Kongsvinger","state":"Nordjylland","country":"Denmark","timezone":"-9:00"},"registerDate":"2021-06-21T21:02:07.374Z","updatedDate":"2021-06-21T21:02:07.374Z"} 
  </msg>
-<msg timestamp="20230806 17:06:35.457" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20230806 17:06:35.112" endtime="20230806 17:06:35.457"/>
+<msg timestamp="20230806 21:46:28.582" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230806 21:46:28.201" endtime="20230806 21:46:28.582"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${response.url}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230806 17:06:35.459" endtime="20230806 17:06:35.460"/>
+<status status="PASS" starttime="20230806 21:46:28.583" endtime="20230806 21:46:28.584"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>200</arg>
 <arg>${response.status_code}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20230806 17:06:35.462" level="INFO">Argument types are:
+<msg timestamp="20230806 21:46:28.585" level="INFO">Argument types are:
 &lt;class 'str'&gt;
 &lt;class 'int'&gt;</msg>
-<status status="PASS" starttime="20230806 17:06:35.461" endtime="20230806 17:06:35.462"/>
+<status status="PASS" starttime="20230806 21:46:28.585" endtime="20230806 21:46:28.585"/>
 </kw>
-<status status="PASS" starttime="20230806 17:06:35.110" endtime="20230806 17:06:35.463"/>
+<status status="PASS" starttime="20230806 21:46:28.199" endtime="20230806 21:46:28.586"/>
 </test>
-<status status="PASS" starttime="20230806 17:06:34.688" endtime="20230806 17:06:35.465"/>
+<status status="PASS" starttime="20230806 21:46:27.748" endtime="20230806 21:46:28.587"/>
 </suite>
 <statistics>
 <total>

@@ -21,9 +21,6 @@ Get List Of Users
 
 Get User By ID
     ${headers}    Create Dictionary    app-id=${app-id}
-
-    ${ID}    Create Dictionary    path=${userID}
-    ${response} =    GET    url=${BaseURL}/user    headers=${headers}    params=${userID}
+    ${response} =    GET    url=${BaseURL}/user/${userID}    headers=${headers}
     Log To Console    ${response.url}
     Should Be Equal As Strings    200    ${response.status_code}
-
