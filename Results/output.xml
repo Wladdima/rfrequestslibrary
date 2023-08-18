@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230811 22:42:42.824" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230818 17:38:32.715" rpa="false" schemaversion="3">
 <suite id="s1" name="dummiAPI" source="C:\development\robot-scripts\rfrequestslibrary\Tests\dummiAPI.robot">
 <test id="s1-t1" name="Test Create New User" line="47">
 <kw name="Create New User">
@@ -11,8 +11,8 @@
 <var>${headers}</var>
 <arg>app-id=${app-id}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20230811 22:42:42.887" level="INFO">${headers} = {'app-id': '64cc05b3e19eb856065f5806'}</msg>
-<status status="PASS" starttime="20230811 22:42:42.887" endtime="20230811 22:42:42.887"/>
+<msg timestamp="20230818 17:38:32.783" level="INFO">${headers} = {'app-id': '64cc05b3e19eb856065f5806'}</msg>
+<status status="PASS" starttime="20230818 17:38:32.782" endtime="20230818 17:38:32.783"/>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <var>${data}</var>
@@ -20,8 +20,8 @@
 <arg>lastName=${new_user_last_name}</arg>
 <arg>email=${new_user_email}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20230811 22:42:42.887" level="INFO">${data} = {'firstName': 'Max', 'lastName': 'Mustermann', 'email': 'maxmustermax123456@mail.com'}</msg>
-<status status="PASS" starttime="20230811 22:42:42.887" endtime="20230811 22:42:42.887"/>
+<msg timestamp="20230818 17:38:32.783" level="INFO">${data} = {'firstName': 'Max', 'lastName': 'Mustermann', 'email': 'maxmustermax123456789@mail.com'}</msg>
+<status status="PASS" starttime="20230818 17:38:32.783" endtime="20230818 17:38:32.783"/>
 </kw>
 <kw name="POST" library="RequestsLibrary">
 <var>${response}</var>
@@ -29,133 +29,206 @@
 <arg>headers=${headers}</arg>
 <arg>data=${data}</arg>
 <doc>Sends a POST request.</doc>
-<msg timestamp="20230811 22:42:43.189" level="INFO">POST Request : url=https://dummyapi.io/data/v1/user/create 
+<msg timestamp="20230818 17:38:33.275" level="INFO">POST Request : url=https://dummyapi.io/data/v1/user/create 
  path_url=/data/v1/user/create 
- headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'app-id': '64cc05b3e19eb856065f5806', 'Content-Length': '69', 'Content-Type': 'application/x-www-form-urlencoded'} 
- body=firstName=Max&amp;lastName=Mustermann&amp;email=maxmustermax123456%40mail.com 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'app-id': '64cc05b3e19eb856065f5806', 'Content-Length': '72', 'Content-Type': 'application/x-www-form-urlencoded'} 
+ body=firstName=Max&amp;lastName=Mustermann&amp;email=maxmustermax123456789%40mail.com 
  </msg>
-<msg timestamp="20230811 22:42:43.189" level="INFO">POST Response : url=https://dummyapi.io/data/v1/user/create 
+<msg timestamp="20230818 17:38:33.275" level="INFO">POST Response : url=https://dummyapi.io/data/v1/user/create 
  status=200, reason=OK 
- headers={'Connection': 'keep-alive', 'Content-Length': '196', 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'private', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"c4-+CCglMBgWeAk2EPdPeiElCjS8I8"', 'Function-Execution-Id': 'aei5wviho58k', 'Server': 'Google Frontend', 'Strict-Transport-Security': 'max-age=31556926', 'X-Cloud-Trace-Context': '6cc2f08f707923713f33dba9f7a500ae', 'X-Country-Code': 'DE', 'Accept-Ranges': 'bytes', 'Date': 'Fri, 11 Aug 2023 20:42:43 GMT', 'X-Served-By': 'cache-ams21038-AMS', 'X-Cache': 'MISS', 'X-Cache-Hits': '0', 'X-Timer': 'S1691786563.923084,VS0,VE210', 'Vary': 'cookie,need-authorization, x-fh-requested-host, accept-encoding', 'alt-svc': 'h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400'} 
- body={"id":"64d69d43e074d010e1fdafff","firstName":"Max","lastName":"Mustermann","email":"maxmustermax123456@mail.com","registerDate":"2023-08-11T20:42:43.023Z","updatedDate":"2023-08-11T20:42:43.023Z"} 
+ headers={'Connection': 'keep-alive', 'Content-Length': '199', 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'private', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"c7-3S6A2/u/+L7j+o9fOw3QYd0w+Ag"', 'Function-Execution-Id': 'cxz0gg3q8hdj', 'Server': 'Google Frontend', 'Strict-Transport-Security': 'max-age=31556926', 'X-Cloud-Trace-Context': '687ce95ace6ebf768269b7b64dca7dab', 'X-Country-Code': 'DE', 'Accept-Ranges': 'bytes', 'Date': 'Fri, 18 Aug 2023 15:38:33 GMT', 'X-Served-By': 'cache-muc13979-MUC', 'X-Cache': 'MISS', 'X-Cache-Hits': '0', 'X-Timer': 'S1692373113.953823,VS0,VE186', 'Vary': 'cookie,need-authorization, x-fh-requested-host, accept-encoding', 'alt-svc': 'h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400'} 
+ body={"id":"64df9079a5941408c53b04fa","firstName":"Max","lastName":"Mustermann","email":"maxmustermax123456789@mail.com","registerDate":"2023-08-18T15:38:33.059Z","updatedDate":"2023-08-18T15:38:33.059Z"} 
  </msg>
-<msg timestamp="20230811 22:42:43.190" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20230811 22:42:42.887" endtime="20230811 22:42:43.190"/>
+<msg timestamp="20230818 17:38:33.275" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230818 17:38:32.783" endtime="20230818 17:38:33.275"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>200</arg>
 <arg>${response.status_code}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20230811 22:42:43.192" level="INFO">Argument types are:
+<msg timestamp="20230818 17:38:33.277" level="INFO">Argument types are:
 &lt;class 'str'&gt;
 &lt;class 'int'&gt;</msg>
-<status status="PASS" starttime="20230811 22:42:43.190" endtime="20230811 22:42:43.192"/>
+<status status="PASS" starttime="20230818 17:38:33.275" endtime="20230818 17:38:33.277"/>
 </kw>
-<msg timestamp="20230811 22:42:43.192" level="INFO">${new_user_response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20230811 22:42:42.886" endtime="20230811 22:42:43.192"/>
+<msg timestamp="20230818 17:38:33.278" level="INFO">${new_user_response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230818 17:38:32.782" endtime="20230818 17:38:33.278"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${new_user_response.json()['id']}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230811 22:42:43.194" endtime="20230811 22:42:43.196"/>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${new_user_response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20230818 17:38:33.280" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20230818 17:38:33.279" endtime="20230818 17:38:33.280"/>
 </kw>
 <kw name="Get User By ID">
+<var>${response}</var>
 <arg>user_id=${new_user_response.json()['id']}</arg>
 <kw name="Create Dictionary" library="BuiltIn">
 <var>${headers}</var>
 <arg>app-id=${app-id}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20230811 22:42:43.198" level="INFO">${headers} = {'app-id': '64cc05b3e19eb856065f5806'}</msg>
-<status status="PASS" starttime="20230811 22:42:43.198" endtime="20230811 22:42:43.198"/>
+<msg timestamp="20230818 17:38:33.282" level="INFO">${headers} = {'app-id': '64cc05b3e19eb856065f5806'}</msg>
+<status status="PASS" starttime="20230818 17:38:33.282" endtime="20230818 17:38:33.282"/>
 </kw>
 <kw name="GET" library="RequestsLibrary">
 <var>${response}</var>
 <arg>url=${Base_URL}/user/${user_id}</arg>
 <arg>headers=${headers}</arg>
 <doc>Sends a GET request.</doc>
-<msg timestamp="20230811 22:42:43.535" level="INFO">GET Request : url=https://dummyapi.io/data/v1/user/64d69d43e074d010e1fdafff 
- path_url=/data/v1/user/64d69d43e074d010e1fdafff 
+<msg timestamp="20230818 17:38:33.807" level="INFO">GET Request : url=https://dummyapi.io/data/v1/user/64df9079a5941408c53b04fa 
+ path_url=/data/v1/user/64df9079a5941408c53b04fa 
  headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'app-id': '64cc05b3e19eb856065f5806'} 
  body=None 
  </msg>
-<msg timestamp="20230811 22:42:43.535" level="INFO">GET Response : url=https://dummyapi.io/data/v1/user/64d69d43e074d010e1fdafff 
+<msg timestamp="20230818 17:38:33.807" level="INFO">GET Response : url=https://dummyapi.io/data/v1/user/64df9079a5941408c53b04fa 
  status=200, reason=OK 
- headers={'Connection': 'keep-alive', 'Content-Length': '196', 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'private', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"c4-+CCglMBgWeAk2EPdPeiElCjS8I8"', 'Function-Execution-Id': 'aei5us3oytx3', 'Server': 'Google Frontend', 'Strict-Transport-Security': 'max-age=31556926', 'X-Cloud-Trace-Context': '26c3fa8660e47ce9c693ceb94e40f47b', 'X-Country-Code': 'DE', 'Accept-Ranges': 'bytes', 'Date': 'Fri, 11 Aug 2023 20:42:43 GMT', 'X-Served-By': 'cache-ams21060-AMS', 'X-Cache': 'MISS', 'X-Cache-Hits': '0', 'X-Timer': 'S1691786563.237760,VS0,VE181', 'Vary': 'cookie,need-authorization, x-fh-requested-host, accept-encoding', 'alt-svc': 'h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400'} 
- body={"id":"64d69d43e074d010e1fdafff","firstName":"Max","lastName":"Mustermann","email":"maxmustermax123456@mail.com","registerDate":"2023-08-11T20:42:43.023Z","updatedDate":"2023-08-11T20:42:43.023Z"} 
+ headers={'Connection': 'keep-alive', 'Content-Length': '199', 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'private', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"c7-3S6A2/u/+L7j+o9fOw3QYd0w+Ag"', 'Function-Execution-Id': 'cxz0n02llgz0', 'Server': 'Google Frontend', 'Strict-Transport-Security': 'max-age=31556926', 'X-Cloud-Trace-Context': '7d6cba7062650c4d030cf5b062e894d3', 'X-Country-Code': 'DE', 'Accept-Ranges': 'bytes', 'Date': 'Fri, 18 Aug 2023 15:38:33 GMT', 'X-Served-By': 'cache-muc13981-MUC', 'X-Cache': 'MISS', 'X-Cache-Hits': '0', 'X-Timer': 'S1692373113.401895,VS0,VE248', 'Vary': 'cookie,need-authorization, x-fh-requested-host, accept-encoding', 'alt-svc': 'h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400'} 
+ body={"id":"64df9079a5941408c53b04fa","firstName":"Max","lastName":"Mustermann","email":"maxmustermax123456789@mail.com","registerDate":"2023-08-18T15:38:33.059Z","updatedDate":"2023-08-18T15:38:33.059Z"} 
  </msg>
-<msg timestamp="20230811 22:42:43.535" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20230811 22:42:43.199" endtime="20230811 22:42:43.535"/>
+<msg timestamp="20230818 17:38:33.808" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230818 17:38:33.282" endtime="20230818 17:38:33.808"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>200</arg>
 <arg>${response.status_code}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20230811 22:42:43.536" level="INFO">Argument types are:
+<msg timestamp="20230818 17:38:33.810" level="INFO">Argument types are:
 &lt;class 'str'&gt;
 &lt;class 'int'&gt;</msg>
-<status status="PASS" starttime="20230811 22:42:43.535" endtime="20230811 22:42:43.536"/>
+<status status="PASS" starttime="20230818 17:38:33.808" endtime="20230818 17:38:33.810"/>
 </kw>
-<status status="PASS" starttime="20230811 22:42:43.196" endtime="20230811 22:42:43.537"/>
+<msg timestamp="20230818 17:38:33.811" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230818 17:38:33.281" endtime="20230818 17:38:33.811"/>
 </kw>
-<status status="PASS" starttime="20230811 22:42:42.886" endtime="20230811 22:42:43.537"/>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20230818 17:38:33.813" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20230818 17:38:33.812" endtime="20230818 17:38:33.813"/>
+</kw>
+<status status="PASS" starttime="20230818 17:38:32.782" endtime="20230818 17:38:33.814"/>
 </test>
-<test id="s1-t2" name="Test Delete User" line="52">
-<kw name="Delete User By ID">
-<arg>user_id=64d69c47e074d010d3fdafb4</arg>
+<test id="s1-t2" name="Test Delete User" line="53">
+<kw name="Create New User">
+<var>${new_user_response}</var>
+<arg>new_user_first_name=${firstName}</arg>
+<arg>new_user_last_name=${lastName}</arg>
+<arg>new_user_email=${email}</arg>
 <kw name="Create Dictionary" library="BuiltIn">
 <var>${headers}</var>
 <arg>app-id=${app-id}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20230811 22:42:43.541" level="INFO">${headers} = {'app-id': '64cc05b3e19eb856065f5806'}</msg>
-<status status="PASS" starttime="20230811 22:42:43.540" endtime="20230811 22:42:43.541"/>
+<msg timestamp="20230818 17:38:33.818" level="INFO">${headers} = {'app-id': '64cc05b3e19eb856065f5806'}</msg>
+<status status="PASS" starttime="20230818 17:38:33.817" endtime="20230818 17:38:33.818"/>
 </kw>
-<kw name="DELETE" library="RequestsLibrary">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${data}</var>
+<arg>firstName=${new_user_first_name}</arg>
+<arg>lastName=${new_user_last_name}</arg>
+<arg>email=${new_user_email}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230818 17:38:33.818" level="INFO">${data} = {'firstName': 'Max', 'lastName': 'Mustermann', 'email': 'maxmustermax123456789@mail.com'}</msg>
+<status status="PASS" starttime="20230818 17:38:33.818" endtime="20230818 17:38:33.818"/>
+</kw>
+<kw name="POST" library="RequestsLibrary">
 <var>${response}</var>
-<arg>url=${Base_URL}/user/${user_id}</arg>
+<arg>url=${Base_URL}/user/create</arg>
 <arg>headers=${headers}</arg>
-<doc>Sends a DELETE request.</doc>
-<msg timestamp="20230811 22:42:43.816" level="INFO">DELETE Request : url=https://dummyapi.io/data/v1/user/64d69c47e074d010d3fdafb4 
- path_url=/data/v1/user/64d69c47e074d010d3fdafb4 
- headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'app-id': '64cc05b3e19eb856065f5806', 'Content-Length': '0'} 
- body=None 
+<arg>data=${data}</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20230818 17:38:34.191" level="INFO">POST Request : url=https://dummyapi.io/data/v1/user/create 
+ path_url=/data/v1/user/create 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'app-id': '64cc05b3e19eb856065f5806', 'Content-Length': '72', 'Content-Type': 'application/x-www-form-urlencoded'} 
+ body=firstName=Max&amp;lastName=Mustermann&amp;email=maxmustermax123456789%40mail.com 
  </msg>
-<msg timestamp="20230811 22:42:43.817" level="INFO">DELETE Response : url=https://dummyapi.io/data/v1/user/64d69c47e074d010d3fdafb4 
- status=200, reason=OK 
- headers={'Connection': 'keep-alive', 'Content-Length': '33', 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'private', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"21-6a0vj+iXNOuiifyLqXuweGR6lPQ"', 'Function-Execution-Id': 'aei5tvp33blk', 'Server': 'Google Frontend', 'Strict-Transport-Security': 'max-age=31556926', 'X-Cloud-Trace-Context': 'e5c08cb89fafc01f1d8df0289c3b6c48', 'X-Country-Code': 'DE', 'Accept-Ranges': 'bytes', 'Date': 'Fri, 11 Aug 2023 20:42:43 GMT', 'X-Served-By': 'cache-ams21031-AMS', 'X-Cache': 'MISS', 'X-Cache-Hits': '0', 'X-Timer': 'S1691786564.587677,VS0,VE165', 'Vary': 'cookie,need-authorization, x-fh-requested-host, accept-encoding', 'alt-svc': 'h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400'} 
- body={"id":"64d69c47e074d010d3fdafb4"} 
+<msg timestamp="20230818 17:38:34.192" level="INFO">POST Response : url=https://dummyapi.io/data/v1/user/create 
+ status=400, reason=Bad Request 
+ headers={'Connection': 'keep-alive', 'Content-Length': '64', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"40-HXX7izSP+ZX512FtY2lGASVT7Uk"', 'Function-Execution-Id': 'cxz02olm7o48', 'Server': 'Google Frontend', 'X-Cloud-Trace-Context': '79d9db1bd43d47454a42a4bc139bcea7', 'Accept-Ranges': 'bytes', 'Date': 'Fri, 18 Aug 2023 15:38:34 GMT', 'X-Served-By': 'cache-muc13941-MUC', 'X-Cache': 'MISS', 'X-Cache-Hits': '0', 'X-Timer': 'S1692373114.945590,VS0,VE192', 'Vary': 'x-fh-requested-host, accept-encoding', 'alt-svc': 'h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400'} 
+ body={"error":"BODY_NOT_VALID","data":{"email":"Email already used"}} 
  </msg>
-<msg timestamp="20230811 22:42:43.817" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20230811 22:42:43.541" endtime="20230811 22:42:43.817"/>
+<msg timestamp="20230818 17:38:34.192" level="FAIL">HTTPError: 400 Client Error: Bad Request for url: https://dummyapi.io/data/v1/user/create</msg>
+<status status="FAIL" starttime="20230818 17:38:33.818" endtime="20230818 17:38:34.194"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>200</arg>
 <arg>${response.status_code}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20230811 22:42:43.818" level="INFO">Argument types are:
-&lt;class 'str'&gt;
-&lt;class 'int'&gt;</msg>
-<status status="PASS" starttime="20230811 22:42:43.817" endtime="20230811 22:42:43.819"/>
+<status status="NOT RUN" starttime="20230818 17:38:34.194" endtime="20230818 17:38:34.195"/>
+</kw>
+<status status="FAIL" starttime="20230818 17:38:33.817" endtime="20230818 17:38:34.195"/>
+</kw>
+<kw name="Delete User By ID">
+<arg>user_id=${new_user_response,json()['id']}</arg>
+<status status="NOT RUN" starttime="20230818 17:38:34.196" endtime="20230818 17:38:34.196"/>
+</kw>
+<status status="FAIL" starttime="20230818 17:38:33.816" endtime="20230818 17:38:34.197">HTTPError: 400 Client Error: Bad Request for url: https://dummyapi.io/data/v1/user/create</status>
+</test>
+<test id="s1-t3" name="Test Get User By Invalid ID" line="58">
+<kw name="Get User By ID">
+<var>${user}</var>
+<arg>user_id=hhhh</arg>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${headers}</var>
+<arg>app-id=${app-id}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230818 17:38:34.203" level="INFO">${headers} = {'app-id': '64cc05b3e19eb856065f5806'}</msg>
+<status status="PASS" starttime="20230818 17:38:34.203" endtime="20230818 17:38:34.204"/>
+</kw>
+<kw name="GET" library="RequestsLibrary">
+<var>${response}</var>
+<arg>url=${Base_URL}/user/${user_id}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a GET request.</doc>
+<msg timestamp="20230818 17:38:34.524" level="INFO">GET Request : url=https://dummyapi.io/data/v1/user/hhhh 
+ path_url=/data/v1/user/hhhh 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'app-id': '64cc05b3e19eb856065f5806'} 
+ body=None 
+ </msg>
+<msg timestamp="20230818 17:38:34.524" level="INFO">GET Response : url=https://dummyapi.io/data/v1/user/hhhh 
+ status=400, reason=Bad Request 
+ headers={'Connection': 'keep-alive', 'Content-Length': '28', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"1c-8FSS/0hFfXyNl6m9cNG6Y/wleGI"', 'Function-Execution-Id': 'cxz0sm8uuw9d', 'Server': 'Google Frontend', 'X-Cloud-Trace-Context': '7ab54ff79022cf3b140e3b51417e722f', 'Accept-Ranges': 'bytes', 'Date': 'Fri, 18 Aug 2023 15:38:34 GMT', 'X-Served-By': 'cache-muc13974-MUC', 'X-Cache': 'MISS', 'X-Cache-Hits': '0', 'X-Timer': 'S1692373114.290044,VS0,VE155', 'Vary': 'x-fh-requested-host, accept-encoding', 'alt-svc': 'h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400'} 
+ body={"error":"PARAMS_NOT_VALID"} 
+ </msg>
+<msg timestamp="20230818 17:38:34.524" level="FAIL">HTTPError: 400 Client Error: Bad Request for url: https://dummyapi.io/data/v1/user/hhhh</msg>
+<status status="FAIL" starttime="20230818 17:38:34.204" endtime="20230818 17:38:34.525"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${response.json()['id']}</arg>
-<arg>${user_id}</arg>
+<arg>200</arg>
+<arg>${response.status_code}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20230811 22:42:43.819" endtime="20230811 22:42:43.820"/>
+<status status="NOT RUN" starttime="20230818 17:38:34.525" endtime="20230818 17:38:34.525"/>
 </kw>
-<status status="PASS" starttime="20230811 22:42:43.540" endtime="20230811 22:42:43.820"/>
+<status status="FAIL" starttime="20230818 17:38:34.202" endtime="20230818 17:38:34.526"/>
 </kw>
-<status status="PASS" starttime="20230811 22:42:43.539" endtime="20230811 22:42:43.821"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${user.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230818 17:38:34.527" endtime="20230818 17:38:34.527"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${user.status_code}</arg>
+<arg>400</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" starttime="20230818 17:38:34.527" endtime="20230818 17:38:34.528"/>
+</kw>
+<status status="FAIL" starttime="20230818 17:38:34.201" endtime="20230818 17:38:34.528">HTTPError: 400 Client Error: Bad Request for url: https://dummyapi.io/data/v1/user/hhhh</status>
 </test>
-<status status="PASS" starttime="20230811 22:42:42.826" endtime="20230811 22:42:43.824"/>
+<status status="FAIL" starttime="20230818 17:38:32.716" endtime="20230818 17:38:34.532"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="2" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="dummiAPI">dummiAPI</stat>
+<stat pass="1" fail="2" skip="0" id="s1" name="dummiAPI">dummiAPI</stat>
 </suite>
 </statistics>
 <errors>
